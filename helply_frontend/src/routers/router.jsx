@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home";
 import App from "../App";
+import { UploadOpportunities } from "../pages/UploadOpportunities";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/uploadopportunities",
+        element: <UploadOpportunities />,
       },
     ],
   },

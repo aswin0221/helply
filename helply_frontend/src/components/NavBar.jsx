@@ -19,7 +19,7 @@ const NavBar = () => {
   // Navitems
   const navItems = [
     { link: "Home", path: "/" },
-    { link: "Register", path: "/register" },
+    { link: "UploadOpportunities", path: "/uploadopportunities" },
     { link: "Event Schedule", path: "/events" },
     { link: "Achievements", path: "/achievements" },
     { link: "Admin", path: "/admin" },
