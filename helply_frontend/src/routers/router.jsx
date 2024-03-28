@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home";
 import App from "../App";
 import { UploadOpportunities } from "../pages/UploadOpportunities";
+import { ViewSingleOpportunities } from "../pages/ViewSingleOpportunities ";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/uploadopportunities",
         element: <UploadOpportunities />,
+      },
+      {
+        path: "/viewsingleopportunities ",
+        element: <ViewSingleOpportunities />,
       },
     ],
   },
