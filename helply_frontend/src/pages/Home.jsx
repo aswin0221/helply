@@ -6,7 +6,7 @@ import { PostCard } from "../components/home/PostCard";
 
 export const Home = () => {
   return (
-    <div className="bg-gray-200 min-h-screen py-10 px-4 sm:px-10 md:px-20 lg:px-52">
+    <div className="bg-teal-50 min-h-screen py-10 px-4 sm:px-10 md:px-20 lg:px-52">
       <HomeBanner />
       <p className="">
         <b>Results For Pondicherry</b>

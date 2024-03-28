@@ -19,10 +19,11 @@ const NavBar = () => {
   // Navitems
   const navItems = [
     { link: "Home", path: "/" },
+    { link: "Register", path: "/register" },
     { link: "UploadOpportunities", path: "/uploadopportunities" },
     { link: "viewsingleopportunities ", path: "/viewsingleopportunities" },
-    { link: "Achievements", path: "/achievements" },
-    { link: "Admin", path: "/admin" },
+    { link: "VolunteerDirectory", path: "/volunteerdirectory" },
+    { link: "BloodDonors", path: "/blooddonors" },
     { link: "About", path: "/about" },
   ];
 
