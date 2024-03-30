@@ -9,7 +9,7 @@ export const Home = () => {
     <div className="bg-teal-50 min-h-screen py-10 px-4 sm:px-10 md:px-20 lg:px-52">
       <HomeBanner />
       <p className="">
-        <b>Results For Pondicherry</b>
+        <b>Results For chennai</b>
       </p>
       <PostCard />
       <PostCard />
