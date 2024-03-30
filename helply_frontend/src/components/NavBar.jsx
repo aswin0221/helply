@@ -25,6 +25,7 @@ const NavBar = () => {
     { link: "VolunteerDirectory", path: "/volunteerdirectory" },
     { link: "BloodDonors", path: "/blooddonors" },
     { link: "About", path: "/about" },
+    { link: "Login", path: "/login" },
   ];
 
   return (

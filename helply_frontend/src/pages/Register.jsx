@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import RegisterImg from "../assets/volunteering/register.png";
 import RegisterImgSvg from "../assets/volunteering/register-svg.png";
-
 import {
   AiOutlineUser,
   AiOutlineMail,
@@ -40,94 +39,103 @@ const RegistrationForm = () => {
 
   return (
     <div className="bg-teal-50 min-h-screen py-10 px-4 sm:px-10 md:px-20 lg:px-52">
-      <div className="flex gap-10 items-center">
-        <div className="max-w-4xl mx-auto bg-white p-8 w-full lg:w-1/2 rounded-lg shadow-md">
+      <div className="flex gap-10 w-full items-stretch">
+        {/* Left div containing the registration form */}
+        <div className=" max-w-[100%] md:max-w-[50%]  mx-auto bg-white p-4 flex-1 rounded-lg shadow-md">
           <div className="flex gap-2 flex-col justify-center items-center lg:flex-row  lg:justify-center lg:items-start align-middle">
             <p className="text-xl">Join Us as a Volunteer </p>
             <p className="text-xl font-bold mb-6">Registration Form</p>
           </div>
           <div className="px-3">
-            <div className="bg-white rounded-lg p-4 mb-4 flex items-center">
+            {/* Full Name */}
+            <div className="bg-white rounded-lg p-4 mb-2 flex items-center">
               <AiOutlineUser className="text-teal-600 mr-3" />
               <input
                 type="text"
-                className="border border-black w-full p-3 my-3 pl-10"
+                className="border border-black w-full p-3  pl-10"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 placeholder="Enter your full name"
                 required
               />
             </div>
-            <div className="bg-white rounded-lg p-4 mb-4 flex items-center">
+            {/* Email */}
+            <div className="bg-white rounded-lg p-4 mb-2 flex items-center">
               <AiOutlineMail className="text-teal-600 mr-3" />
               <input
                 type="email"
-                className="border border-black w-full p-3 my-3 pl-10"
+                className="border border-black w-full p-3  pl-10"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address"
                 required
               />
             </div>
-            <div className="bg-white rounded-lg p-4 mb-4 flex items-center">
+            {/* Age */}
+            <div className="bg-white rounded-lg p-4 mb-2 flex items-center">
               <AiOutlineNumber className="text-teal-600 mr-3" />
               <input
                 type="number"
-                className="border border-black w-full p-3 my-3 pl-10"
+                className="border border-black w-full p-3 pl-10"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
                 placeholder="Enter your age"
                 required
               />
             </div>
-            <div className="bg-white rounded-lg p-4 mb-4 flex items-center">
+            {/* Mobile Number */}
+            <div className="bg-white rounded-lg p-4 mb-2 flex items-center">
               <FaPhoneAlt className="text-teal-600 mr-3" />
               <input
                 type="tel"
-                className="border border-black w-full p-3 my-3 pl-10"
+                className="border border-black w-full p-3  pl-10"
                 value={mobileNumber}
                 onChange={(e) => setMobileNumber(e.target.value)}
                 placeholder="Enter your mobile number"
                 required
               />
             </div>
-            <div className="bg-white rounded-lg p-4 mb-4 flex items-center">
+            {/* City */}
+            <div className="bg-white rounded-lg p-4 mb-2 flex items-center">
               <AiOutlineEnvironment className="text-teal-600 mr-3" />
               <input
                 type="text"
-                className="border border-black w-full p-3 my-3 pl-10"
+                className="border border-black w-full p-3  pl-10"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 placeholder="Enter your city"
                 required
               />
             </div>
-            <div className="bg-white rounded-lg p-4 mb-4 flex items-center">
+            {/* State */}
+            <div className="bg-white rounded-lg p-4 mb-2 flex items-center">
               <AiOutlineEnvironment className="text-teal-600 mr-3" />
               <input
                 type="text"
-                className="border border-black w-full p-3 my-3 pl-10"
+                className="border border-black w-full p-3  pl-10"
                 value={state}
                 onChange={(e) => setState(e.target.value)}
                 placeholder="Enter your state"
                 required
               />
             </div>
-            <div className="bg-white rounded-lg p-4 mb-4 flex items-center">
+            {/* Emergency Contact */}
+            <div className="bg-white rounded-lg p-4 mb-2 flex items-center">
               <FaPhoneAlt className="text-teal-600 mr-3" />
               <input
                 type="tel"
-                className="border border-black w-full p-3 my-3 pl-10"
+                className="border border-black w-full p-3  pl-10"
                 value={emergencyContact}
                 onChange={(e) => setEmergencyContact(e.target.value)}
                 placeholder="Enter your emergency contact number"
                 required
               />
             </div>
-            <div className="bg-white rounded-lg p-4 mb-4 flex items-center">
+            {/* Blood Donor */}
+            <div className="bg-white rounded-lg p-4 mb-2 flex items-center">
               <BiGroup className="text-teal-600 mr-3" />
               <select
-                className="border border-black w-full p-3 my-3 pl-10"
+                className="border border-black w-full p-3  pl-10"
                 value={isBloodDonor}
                 onChange={(e) => setIsBloodDonor(e.target.value === "true")}
                 required
@@ -136,12 +144,13 @@ const RegistrationForm = () => {
                 <option value="true">Yes</option>
               </select>
             </div>
+            {/* Blood Group (if blood donor) */}
             {isBloodDonor && (
-              <div className="bg-white rounded-lg p-4 mb-4 flex items-center">
+              <div className="bg-white rounded-lg p-4 mb-2 flex items-center">
                 <BiGroup className="text-teal-600 mr-3" />
                 <input
                   type="text"
-                  className="border border-black w-full p-3 my-3 pl-10"
+                  className="border border-black w-full p-3 pl-10"
                   value={bloodGroup}
                   onChange={(e) => setBloodGroup(e.target.value)}
                   placeholder="Enter your blood group"
@@ -149,6 +158,7 @@ const RegistrationForm = () => {
                 />
               </div>
             )}
+            {/* Register Button */}
             <div className="flex items-center">
               <button
                 className="bg-teal-600 hover:bg-teal-900 text-white font-bold py-3 px-6 rounded-lg w-full"
@@ -159,14 +169,25 @@ const RegistrationForm = () => {
             </div>
           </div>
         </div>
-        {/* Second half width div */}
-        <div className="w-1/2 hidden lg:flex flex-col gap-10">
-          <h3 className="font-mono font-bold text-teal-600">
-            "A drop of hope, a lifetime of impact: Register to Save Lives
-            Today!"
-          </h3>
-          <img src={RegisterImgSvg} alt="" />
-          <img src={RegisterImg} alt="" />
+        {/* Right div containing images */}
+        <div className="hidden max-w-[100%]  md:max-w-[50%] lg:flex flex-col">
+          <div className="max-w-4xl mx-auto p-8 flex-1 flex flex-col rounded-lg gap-10 shadow-md">
+            <h3 className="font-mono font-bold  text-teal-600">
+              "A drop of hope, a lifetime of impact: Register to Save Lives
+              Today!"
+            </h3>
+            {/* Adjust the maximum width and height of the images */}
+            <img
+              src={RegisterImgSvg}
+              alt=""
+              className="max-w-full h-full max-h-[370px] rounded-sm object-contain"
+            />
+            <img
+              src={RegisterImg}
+              alt=""
+              className="max-w-full  h-full max-h-[370px] object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>

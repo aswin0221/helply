@@ -7,6 +7,7 @@ import { VolunteerDirectory } from "../pages/VolunteerDirectory";
 import { BloodDonors } from "../pages/BloodDonors";
 import AboutPage from "../pages/AboutPage";
 import RegistrationForm from "../pages/Register";
+import LoginForm from "../pages/LoginSignupPage";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <RegistrationForm />,
+      },
+      {
+        path: "/login",
+        element: <LoginForm />,
       },
     ],
   },
